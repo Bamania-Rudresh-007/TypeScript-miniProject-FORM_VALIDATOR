@@ -34,11 +34,8 @@ function validate(input) {
     if (result.success) {
         console.log("Success! Registered user:", result.data.name);
     }
-    else if (result.error) {
-        console.error("Validation Failed:", result.error.join(", "));
-    }
     else {
-        console.log();
+        console.error("Validation Failed:", result.error.join(", "));
     }
 }
 validate({ name: "Rudresh", email: "bamaniarudresh2008@gmail.com", age: 18 });
