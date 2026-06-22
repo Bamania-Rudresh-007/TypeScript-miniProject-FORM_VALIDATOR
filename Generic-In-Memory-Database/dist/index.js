@@ -44,7 +44,7 @@ class Database {
 const userDb = new Database();
 const productDb = new Database();
 // Insert
-const [ok, user, msg] = userDb.insert({ id: 1, name: "Raj", email: "raj@email.com", role: Role.Admin });
+const [ok, user, msg] = userDb.insert({ id: 1, name: "Rudresh", email: "bamaniarudresh.com", role: Role.Admin });
 console.log(msg);
 // Find
 const [found, foundUser, findMsg] = userDb.findById(1);
@@ -52,7 +52,7 @@ if (found && foundUser) {
     console.log("Found:", foundUser.name);
 }
 // Update
-const [updated, updatedUser, updateMsg] = userDb.update(1, { name: "Rajesh" });
+const [updated, updatedUser, updateMsg] = userDb.update(1, { name: "RD" });
 console.log(updateMsg);
 // Delete
 const [deleted, , deleteMsg] = userDb.delete(1);
