@@ -1,8 +1,16 @@
 "use strict";
+// type FormInput = {
+//     name: string;
+//     email: string;
+//     age: number;
+// };
 Object.defineProperty(exports, "__esModule", { value: true });
 function isFormInput(input) {
-    return (input !== null &&
-        typeof input === "object" &&
+    return (typeof input === "object" &&
+        input !== null &&
+        "name" in input &&
+        "email" in input &&
+        "age" in input &&
         typeof input.name === "string" &&
         typeof input.email === "string" &&
         typeof input.age === "number");
@@ -11,7 +19,7 @@ function validateInput(input) {
     if (!isFormInput(input)) {
         return {
             success: false,
-            error: ["Invalid data structure or missing fields."],
+            error: ["Invalid data structure or missing fields."]
         };
     }
     const error = [];
@@ -27,15 +35,18 @@ function validateInput(input) {
             error,
         };
     }
-    return { success: true, data: input };
+    return {
+        success: true,
+        data: input
+    };
 }
 function validate(input) {
     const result = validateInput(input);
     if (result.success) {
-        console.log("Success! Registered user:", result.data.name);
+        console.log("Success! Registered User:- ", result.data.name);
     }
     else {
-        console.error("Validation Failed:", result.error.join(", "));
+        console.log("Error: ", result.error.join(", "));
     }
 }
 validate({ name: "Rudresh", email: "bamaniarudresh2008@gmail.com", age: 18 });
