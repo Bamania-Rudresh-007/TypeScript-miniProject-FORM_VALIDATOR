@@ -69,6 +69,10 @@ const productDb = new Database<Product>();
 const [ok, user, msg] = userDb.insert({ id: 1, name: "Rudresh", email: "bamaniarudresh.com", role: Role.Admin });
 console.log(msg);
 
+// check edgeCases also
+const [ok1, user1, mess1] = userDb.insert({id: 1, name: "Dharmik", email: "dharmiksolanki@gmail.com", role: Role.Member});
+console.log(mess1);
+
 // Find
 const [found, foundUser, findMsg] = userDb.findById(1);
 if (found && foundUser) {
