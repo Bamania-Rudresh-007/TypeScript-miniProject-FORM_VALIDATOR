@@ -46,6 +46,9 @@ const productDb = new Database();
 // Insert
 const [ok, user, msg] = userDb.insert({ id: 1, name: "Rudresh", email: "bamaniarudresh.com", role: Role.Admin });
 console.log(msg);
+const [ok1, user1, msg1] = userDb.insert({ id: 1, name: "Rudresh", email: "bamaniarudresh.com", role: Role.Admin });
+console.log(msg1);
+console.log(userDb.getAll());
 // Find
 const [found, foundUser, findMsg] = userDb.findById(1);
 if (found && foundUser) {
