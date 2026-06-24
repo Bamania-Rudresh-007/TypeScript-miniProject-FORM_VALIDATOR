@@ -90,3 +90,9 @@ console.log(deleteMsg);
 // Products work the exact same way
 productDb.insert({ id: 1, name: "Laptop", price: 999, category: "Electronics" });
 console.log(productDb.getAll());
+
+productDb.update(1, { price: 899 });
+console.log(productDb.getAll());
+
+productDb.delete(1);
+console.log(productDb.getAll());
