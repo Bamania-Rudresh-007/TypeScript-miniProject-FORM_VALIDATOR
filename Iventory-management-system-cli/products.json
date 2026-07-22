@@ -1,0 +1,28 @@
+[
+  {
+    "id": "E01",
+    "name": "Gaming Laptop",
+    "price": 1200,
+    "stock": 0,
+    "category": "Electronics",
+    "voltage": 230,
+    "warrantyMonths": 24
+  },
+  {
+    "id": "C01",
+    "name": "Hoodie",
+    "price": 45,
+    "stock": 50,
+    "category": "Clothing",
+    "size": "L",
+    "material": "Cotton"
+  },
+  {
+    "id": "F01",
+    "name": "Organic Honey",
+    "price": 12,
+    "stock": 100,
+    "category": "Food",
+    "expiryDate": "2027-12-31"
+  }
+]
